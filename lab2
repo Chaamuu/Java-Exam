@@ -36,25 +36,22 @@ public class triangle {
 		return 0.5*this.base*this.height;
 	}
 }
-public class Main{
-	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("enter the radius");
-		double radius=sc.nextDouble();
-		Circle c1=new Circle(radius);
-		System.out.println("Area of the circle is "+c1.calarea());
-		
-		System.out.println("enter the height of the triangle");
-		int height=sc.nextInt();
-		System.out.println("Enter the base");
-		int base=sc.nextInt();
-		
-		triangle t=new triangle(height,base);
-		System.out.println("The area of the triangle is "+ t.calArea());
-		
-		System.out.println("Enter the side of the square");
-		int side=sc.nextInt();
-		Square s= new Square(side);
-		s.calare();
-	}
+import shapes.*;
+import shapes.Triangle;
+import shapes.Circle;
+
+public class Main {
+    public static void main(String[] args) {
+        Square square = new Square(5);
+        System.out.println("Area of the Square:");
+        System.out.println(square.calculateArea());
+
+        Triangle triangle = new Triangle(6,5);
+        System.out.println("Area of the Triangle:");
+        System.out.println(triangle.calculateArea());
+
+        Circle circle = new Circle(5);
+        System.out.println("Area of the Circle:");
+        System.out.println(circle.calculateArea());
+    }
 }
