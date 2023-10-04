@@ -1,0 +1,60 @@
+package lab2;
+
+public class Circle {
+	double radius;
+
+public Circle(double radius ) {
+	this.radius=radius;
+	
+}
+public double calarea() {
+	return 3.142 * this.radius*this.radius;
+}
+}
+public class Square {
+	int side;
+	
+	public Square(int side) {
+		this.side=side;
+	}
+	public void calare() {
+		int area= this.side *this.side;
+		System.out.println("the area is: "+area);
+	}
+	
+}
+public class triangle {
+	int base;
+	int height;
+	
+	public triangle(int base,int height) {
+		this.base=base;
+		this.height=height;
+	}
+	
+	public double calArea() {
+		return 0.5*this.base*this.height;
+	}
+}
+public class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the radius");
+		double radius=sc.nextDouble();
+		Circle c1=new Circle(radius);
+		System.out.println("Area of the circle is "+c1.calarea());
+		
+		System.out.println("enter the height of the triangle");
+		int height=sc.nextInt();
+		System.out.println("Enter the base");
+		int base=sc.nextInt();
+		
+		triangle t=new triangle(height,base);
+		System.out.println("The area of the triangle is "+ t.calArea());
+		
+		System.out.println("Enter the side of the square");
+		int side=sc.nextInt();
+		Square s= new Square(side);
+		s.calare();
+	}
+}
